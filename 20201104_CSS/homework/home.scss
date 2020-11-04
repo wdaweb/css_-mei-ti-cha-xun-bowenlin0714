@@ -1,0 +1,152 @@
+@mixin indi($top,$left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+@mixin line($top,$left,$deg) {
+  content: '';
+  background-color: grey;
+  height: 1px;
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: rotate($deg)
+}
+:root{
+  font-size: calc(0.8rem + 0.6vw);
+}
+
+body,html{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+ .container{
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+  .course{
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid #333;
+    text-align: center;
+    font-size: 100vw/40;
+     img{
+       margin-top: 10%;
+       width:45%;
+       height:38%;
+     }
+     h2{
+       text-align: left;
+     } 
+     p{
+       text-align: left;
+     }
+  }
+  .c1{
+    img{
+      width: 45%;
+      height: 50%;
+      margin-top: 1%;
+    }
+  }
+ }
+
+@media (min-width: 1000px){
+  .container{
+    font-size: calc(0.5rem + 0.3vw);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+   .course{
+     width: 10%;
+     height: 25%;
+     border: none;
+     text-align: center;
+     padding: none;
+      img{
+        width:100%;
+        height:80%;
+      }
+      h2{
+        text-align: center;
+        color: black;
+        font-weight: bolder;
+      } 
+      p{
+       display: none;
+      }
+    }
+    .c1{
+      width: 18%;
+      height: 50%;
+      line-height: 200%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      img{
+        height: 70%;
+      }
+    }
+    .html{
+      @include indi(10%, 3%);
+      &::after{
+        @include line(90%,100%,15deg);
+        width: 260%;     
+      }
+    }
+    .css{
+      img{
+        width: 70%;
+      }
+      @include indi(2%, 23%);
+      &::after{
+        @include line(100%,90%,40deg);
+        width: 100%;
+      }
+    }
+    .js{
+      @include indi(45%, 5%);
+      &::after{
+        @include line(30%,90%,172deg);
+        width: 250%;
+      }
+    }
+    .jq{
+      @include indi(70%, 20%);
+      &::after{
+        @include line(-30%,80%,150deg);
+        width: 150%;
+      }
+    }
+    .boot{
+      @include indi(5%, 70%);
+      &::after{
+        @include line(90%,-120%,150deg);
+        width: 125%;
+      }
+    }
+    .sass{
+      @include indi(35%, 85%);
+      &::after{
+        @include line(50%,-250% ,180deg );
+        width: 220%;
+      }
+    }
+    .vue{
+      @include indi(65%, 70%);
+      &::after{
+        @include line(-20%,-120% ,30deg );
+        width: 120%;
+      }
+    }
+  }
+ }
+
+  
+

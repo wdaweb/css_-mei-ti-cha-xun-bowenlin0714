@@ -1,0 +1,191 @@
+:root {
+  font-size: calc(0.8rem + 0.6vw);
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .course {
+  width: 100%;
+  height: 50%;
+  border-bottom: 1px solid #333;
+  text-align: center;
+  font-size: 100vw/40;
+}
+.container .course img {
+  margin-top: 10%;
+  width: 45%;
+  height: 38%;
+}
+.container .course h2 {
+  text-align: left;
+}
+.container .course p {
+  text-align: left;
+}
+.container .c1 img {
+  width: 45%;
+  height: 50%;
+  margin-top: 1%;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    font-size: calc(0.5rem + 0.3vw);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .container .course {
+    width: 10%;
+    height: 25%;
+    border: none;
+    text-align: center;
+    padding: none;
+  }
+  .container .course img {
+    width: 100%;
+    height: 80%;
+  }
+  .container .course h2 {
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+  }
+  .container .course p {
+    display: none;
+  }
+  .container .c1 {
+    width: 18%;
+    height: 50%;
+    line-height: 200%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .container .c1 img {
+    height: 70%;
+  }
+  .container .html {
+    position: absolute;
+    top: 10%;
+    left: 3%;
+  }
+  .container .html::after {
+    content: "";
+    background-color: grey;
+    height: 1px;
+    position: absolute;
+    top: 90%;
+    left: 100%;
+    transform: rotate(15deg);
+    width: 260%;
+  }
+  .container .css {
+    position: absolute;
+    top: 2%;
+    left: 23%;
+  }
+  .container .css img {
+    width: 70%;
+  }
+  .container .css::after {
+    content: "";
+    background-color: grey;
+    height: 1px;
+    position: absolute;
+    top: 100%;
+    left: 90%;
+    transform: rotate(40deg);
+    width: 100%;
+  }
+  .container .js {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+  }
+  .container .js::after {
+    content: "";
+    background-color: grey;
+    height: 1px;
+    position: absolute;
+    top: 30%;
+    left: 90%;
+    transform: rotate(172deg);
+    width: 250%;
+  }
+  .container .jq {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+  }
+  .container .jq::after {
+    content: "";
+    background-color: grey;
+    height: 1px;
+    position: absolute;
+    top: -30%;
+    left: 80%;
+    transform: rotate(150deg);
+    width: 150%;
+  }
+  .container .boot {
+    position: absolute;
+    top: 5%;
+    left: 70%;
+  }
+  .container .boot::after {
+    content: "";
+    background-color: grey;
+    height: 1px;
+    position: absolute;
+    top: 90%;
+    left: -120%;
+    transform: rotate(150deg);
+    width: 125%;
+  }
+  .container .sass {
+    position: absolute;
+    top: 35%;
+    left: 85%;
+  }
+  .container .sass::after {
+    content: "";
+    background-color: grey;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: -250%;
+    transform: rotate(180deg);
+    width: 220%;
+  }
+  .container .vue {
+    position: absolute;
+    top: 65%;
+    left: 70%;
+  }
+  .container .vue::after {
+    content: "";
+    background-color: grey;
+    height: 1px;
+    position: absolute;
+    top: -20%;
+    left: -120%;
+    transform: rotate(30deg);
+    width: 120%;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>media query</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      list-style: 0;
+      box-sizing: border-box;
+      transition: 1s;
+    }
+    html,
+    body {
+      height: 100%;
+    }
+
+    /* cal()  */
+    :root{
+      font-size: calc(0.8rem + 5vw);
+    }
+
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url("./Bruce-Wayne-Quits-Batman-Comic.jpg") no-repeat center/cover;
+    }
+
+    .container{
+      background-color: white;
+      width: 95%;
+      margin: 1rem auto;
+      padding: 15px;
+      border: 1px solid black;
+    }
+    h1{
+      margin-bottom: 1rem;
+    }
+
+    /* all print(印表機) screen(電腦,平板,手機) speech(螢幕)  */
+    @media all and (min-width: 500px){
+      
+    }
+    /* all可省略  */
+    /* 斷點 break-point */
+    /* min-width 尺寸以上 (包含) */
+    @media (min-width: 500px){}  
+     /* max-width 尺寸以下 (包含) */
+    @media (max-width: 768px){}
+
+    /* 裝置介於 576px 與 768 之間的樣式  */
+    @media (min-width: 500px) and (max-width: 768px){}
+
+    @media (min-width: 576px){
+      body{
+      background-image: url("https://picsum.photos/600/600/?random=1");
+      }
+      .container{
+        margin: 1rem auto;
+        background-color: white;
+        width: 95%;
+        padding: 15px;
+        border: 1px dashed black;
+      }
+
+      h1{
+        color: yellow;
+        background-color: yellowgreen;
+      }
+      p{
+        font-size: 1.3rem;
+      }
+    }  
+
+    .isShow{
+      display: none;
+    }
+
+    @media (max-width: 768px){
+      body{
+        background-image: url("https://picsum.photos/id/684/600/400");
+      }
+
+      .container{
+        margin: 1rem auto;
+        background-color: white;
+        width: 95%;
+        padding: 15px;
+        border: 3px dashed black;
+      }
+
+      h1{
+        color: yellow;
+        background-color: yellowgreen;
+      }
+      p{
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (min-width: 992px){
+
+      :root{
+        font-size: 1.2rem;
+      }
+      body{
+      background-image: url("https://picsum.photos/600/600/?random=2");
+      }
+      .container{
+        margin: 1rem auto;
+        background-color: white;
+        width: 95%;
+        padding: 15px;
+        border: 5px dashed rgb(144, 39, 39);
+      }
+
+      h1{
+        color: yellow;
+        background-color: yellowgreen;
+      }
+      p{
+        font-size: 1.3rem;
+      }
+      .isShow{
+      display: inline-block;
+    }
+    }  
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 >響應式網頁<span class="isShow">(Responsive web Design,RWD)</span></h1>
+    <ul>
+      <li>1. 響應式網頁設計，讓內容如流水般能適應各種形狀的容器，能在每個裝置尺寸正常瀏覽</li>
+      <li>2. CSS 的media query 負責響應是最主要的工作</li>
+      <li>3. 媒體查詢的斷點(breakpoint)，指的是為不同裝置設定通過的位置點。通過設定的位置即套用該尺寸樣式</li>
+      <li>4. 使用相對單位設定寬高或大小(rem-%-vh-vw)，例如:字體大小用 rem ，容器寬，高使用 %</li>
+      <li>5. 設計由小尺寸手機(xs)->平板(md)->電腦螢幕(lg)->大螢幕(xl)->超大型螢幕(xxl)</li>
+    </ul>
+  </div>
+</body>
+</html>

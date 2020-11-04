@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* div  {
+      color: red;
+    }
+    p {
+      color: green;
+    }
+
+    span {
+      color: blue;
+    } */
+
+    /* 
+     CSS 權重
+     大老二遊戲
+     1. inline style 黑桃
+     2. ID 選擇器
+     3. CLASS 選擇器 屬性選擇器[] 偽類 
+     4. 標籤 偽元素
+
+     連接符 > 子代選擇，+同層相鄰，~同層全體，||，^，$，*，:not(偽類)，對權重沒有任何貢獻，不過 :not() 括號內部的參數會計算分數
+     */
+
+     /* !important 最高權重*/
+
+     .text{
+      color: blue !important;
+     } 
+  </style>
+</head>
+<body>
+ <h1>標籤具有繼承特性</h1>
+ <div>
+   <h1>標題</h1>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque optio est, beatae quidem provident at!</p>
+  </div>
+  <hr>
+
+  <h1>階層權重，替選擇器打分數</h1>
+  <div>
+    <h1>標題</h1>
+    <p class="text" style="color: red;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque optio est, beatae quidem provident at!</p>
+  </div>
+</body>
+</html>

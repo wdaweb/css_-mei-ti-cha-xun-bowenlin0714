@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .box{
+      width: 400px;
+      height: 400px;
+      border: 3px solid green;
+      border-radius: 10%;
+    }
+    .bg{
+      background-image: url(./Bruce-Wayne-Quits-Batman-Comic.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .object-fit{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 48% 10%;
+       border-radius: 10%;
+    }
+  </style>
+</head>
+<body>
+  <h1>背景圖 bg-size</h1>
+  <p>調整與容器一樣大小</p>
+  <div class="box bg" >
+
+  </div>
+
+  <h1>圖片 oject-fit</h1>
+  <p>圖片放入一個容器時，圖片尺寸不符又不想用影像處理軟體</p>
+  <p>1. 圖片寬度 高度 100%占滿容器，可能因為尺寸不符而變形</p>
+  <p>2. 對圖片使用 object-fit:cover，在使用 object-position 調整位置</p>
+  <div class="box">
+    <img src="./https___hk.hypebeast.com_files_2020_09_robert-pattinson-matt-reeves-batman-1.jpg" alt="" class="object-fit">
+  </div>
+</body>
+</html>
